@@ -48,64 +48,88 @@ const toppings = [{
 
 function orderWaffleCone() {
     console.log('ordering Waffle Cone')
-    vessel[0].quantity += 1
-    console.log(vessel[0].quantity)
+    if (vessel[0].quantity + vessel[1].quantity + vessel[2].quantity > 0) {
+        vessel[0].quantity = 0
+        vessel[1].quantity = 0
+        vessel[2].quantity = 0
+        vessel[0].quantity += 1
+    }
+    else {
+        vessel[0].quantity += 1
+    }
+    // console.log(vessel[0].quantity)
     drawCart()
 }
 
 function orderWaffleBowl() {
     console.log('ordering Waffle Bowl')
-    vessel[1].quantity += 1
-    console.log(vessel[1].quantity)
+    if (vessel[0].quantity + vessel[1].quantity + vessel[2].quantity > 0) {
+        vessel[0].quantity = 0
+        vessel[1].quantity = 0
+        vessel[2].quantity = 0
+        vessel[1].quantity += 1
+    }
+    else {
+        vessel[1].quantity += 1
+    }
+    // console.log(vessel[1].quantity)
     drawCart()
 }
 
 function orderDippedCone() {
     console.log('ordering Dipped Cone')
-    vessel[2].quantity += 1
-    console.log(vessel[2].quantity)
+    if (vessel[0].quantity + vessel[1].quantity + vessel[2].quantity > 0) {
+        vessel[1].quantity = 0
+        vessel[0].quantity = 0
+        vessel[2].quantity = 0
+        vessel[2].quantity += 1
+    }
+    else {
+        vessel[2].quantity += 1
+    }
+    // console.log(vessel[2].quantity)
     drawCart()
 }
 
 function orderCookieDough() {
     console.log('ordering Cookie Dough')
     iceCream[0].quantity += 1
-    console.log(iceCream[0].quantity)
+    // console.log(iceCream[0].quantity)
     drawCart()
 }
 
 function orderVanilla() {
     console.log('ordering Vanilla')
     iceCream[1].quantity += 1
-    console.log(iceCream[1].quantity)
+    // console.log(iceCream[1].quantity)
     drawCart()
 }
 
 function orderStrawberry() {
     console.log('ordering Strawberry')
     iceCream[2].quantity += 1
-    console.log(iceCream[2].quantity)
+    // console.log(iceCream[2].quantity)
     drawCart()
 }
 
 function orderSprinkles() {
     console.log('ordering Sprinkles')
     toppings[0].quantity += 1
-    console.log(toppings[0].quantity)
+    // console.log(toppings[0].quantity)
     drawCart()
 }
 
 function orderChocolateChips() {
     console.log('ordering Chocolate Chips')
     toppings[1].quantity += 1
-    console.log(toppings[1].quantity)
+    // console.log(toppings[1].quantity)
     drawCart()
 }
 
 function orderCookieChunks() {
     console.log('ordering Cookie Chunks')
     toppings[2].quantity += 1
-    console.log(toppings[2].quantity)
+    // console.log(toppings[2].quantity)
     drawCart()
 }
 
