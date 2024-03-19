@@ -138,14 +138,14 @@ function drawCart() {
     let cartTotal = 0
     for (let i = 0; i < vessel.length; i++) {
         if (vessel[i].quantity > 0) {
-            cartContent += `<p>${vessel[i].quantity}x ${vessel[i].name} $${(vessel[i].price * vessel[i].quantity).toFixed(2)}</p>`
+            cartContent += `<p>${vessel[i].quantity}x ${vessel[i].name}- $${(vessel[i].price * vessel[i].quantity).toFixed(2)}</p>`
             // console.log(cartContent)
             cartTotal += (vessel[i].price * vessel[i].quantity)
         }
     }
     for (let i = 0; i < iceCream.length; i++) {
         if (iceCream[i].quantity > 0) {
-            cartContent += `<p>${iceCream[i].quantity}x ${iceCream[i].name} $${(iceCream[i].price * iceCream[i].quantity).toFixed(2)}</p>`
+            cartContent += `<p>${iceCream[i].quantity}x ${iceCream[i].name}- $${(iceCream[i].price * iceCream[i].quantity).toFixed(2)}</p>`
             // console.log(cartContent)
             cartTotal += (iceCream[i].price * iceCream[i].quantity)
         }
@@ -153,7 +153,7 @@ function drawCart() {
 
     for (let i = 0; i < toppings.length; i++) {
         if (toppings[i].quantity > 0) {
-            cartContent += `<p>${toppings[i].quantity}x ${toppings[i].name} $${(toppings[i].price * toppings[i].quantity).toFixed(2)}</p>`
+            cartContent += `<p>${toppings[i].quantity}x ${toppings[i].name}- $${(toppings[i].price * toppings[i].quantity).toFixed(2)}</p>`
             // console.log(cartContent)
             cartTotal += (toppings[i].price * toppings[i].quantity)
         }
