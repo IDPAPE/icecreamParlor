@@ -1,0 +1,17 @@
+img {
+    max-height: 15dvh;
+    object-fit: cover;
+}
+
+body {
+    background-color: lightcoral;
+    font-family: "Madimi One", sans-serif;
+}
+
+.card-color {
+    background-color: aquamarine;
+}
+
+.button-color {
+    background-color: lightcoral;
+}

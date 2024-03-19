@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+        defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="">
+    <main class="container-fluid">
+        <section class="row p-2">
+            <!-- Cart goes here -->
+            <div class="col-4">
+                <div>
+                    <h1>Your Cart</h1>
+                </div>
+                <div class="card text-start card-color">
+                    <div class="card-body">
+                        <h4>Contents</h4>
+                        <hr />
+                        <section id="cart-items">
+
+                        </section>
+                        <h4>Total:</h4>
+                        <hr />
+                        <div class="row">
+                            <div class="col">
+                                <section id="cart-total">
+                                    $0.00
+                                </section>
+                            </div>
+                            <div class="col text-end btn">
+                                <button class="btn rounded-pill button-color border-dark border-opacity-25"
+                                    onclick="checkout()">checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shop Cards -->
+            <div class="col-8">
+                <!-- Vessels cards start here -->
+                <section class="row">
+                    <h1>Vessels</h1>
+                </section>
+
+                <section class="row container-fluid p-2">
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderWaffleCone()">
+                            <img class="card-img-top" src="img/waffleCone.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Waffle Cone $3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderWaffleBowl()">
+                            <img class="card-img-top" src="img/waffleBowl.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Waffle Bowl $4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderDippedCone()">
+                            <img class="card-img-top" src="img/dippedCone.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Dipped Cone $5</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="row">
+                    <h1>Flavors</h1>
+                </section>
+                <!-- Flavors cards start here -->
+                <section class="row container-fluid p-2">
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderCookieDough()">
+                            <img class="card-img-top" src="img/cookieDough.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Cookie Dough $1.25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderVanilla()">
+                            <img class="card-img-top" src="img/vanilla.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Vanilla $1.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderStrawberry()">
+                            <img class="card-img-top" src="img/strawberry.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Strawberry $1.25</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Toppings cards start here -->
+                <section class="row">
+                    <h1>Toppings</h1>
+                </section>
+
+                <section class="row container-fluid p-2">
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderSprinkles()">
+                            <img class="card-img-top" src="img/sprinkles.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Sprinkles $0.25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderChocolateChips()">
+                            <img class="card-img-top" src="img/chocoChips.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Chocolate Chips $0.25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col 4">
+                        <div class="card text-start card-color" onclick="orderCookieChunks()">
+                            <img class="card-img-top" src="img/cookieCrumbs.png" alt="Title" />
+                            <div class="card-body">
+                                <p class="card-text">Cookie Chunks $0.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
